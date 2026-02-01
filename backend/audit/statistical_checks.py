@@ -7,6 +7,7 @@ def check_missing_values(features):
             issues.append(f"{name} has high missing rate ({info.missing})")
     return issues
 
+#checks for the vales tht is out of range
 def check_outliers(features):
     issues = []
     for name, info in features.items():
@@ -19,6 +20,8 @@ def check_outliers(features):
 def check_correlation(features):
     return []  # placeholder
 
+
+#this is for checking sensitive featuers that may introduce bias
 def check_bias(features):
     issues = []
     for name, info in features.items():
